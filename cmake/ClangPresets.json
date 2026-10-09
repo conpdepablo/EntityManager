@@ -1,0 +1,18 @@
+{
+   "version": 5,
+   "include": [
+      "CommonPresets.json"
+   ],
+   "configurePresets": [
+      {
+         "name": "clang-cfg",
+         "hidden": true,
+         "inherits": "common-cfg",
+         "cacheVariables": {
+            "CMAKE_CXX_COMPILER": "clang++",
+            "CXX_WARNING_FLAGS": "-Wall;-Wextra;-Weverything;-Wno-c++98-compat;-Wno-pre-c++17-compat;-Wno-c++98-compat-pedantic;-Wno-c++20-compat;-Wno-padded;-Wno-missing-prototypes",
+            "CXX_SANITIZERS_FLAGS": "-fsanitize=address,undefined"
+         }
+      }
+   ]
+}

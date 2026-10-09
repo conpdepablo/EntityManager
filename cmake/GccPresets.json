@@ -1,0 +1,18 @@
+{
+   "version": 5,
+   "include": [
+      "CommonPresets.json"
+   ],
+   "configurePresets": [
+      {
+         "name": "g++-cfg",
+         "hidden": true,
+         "inherits": "common-cfg",
+         "cacheVariables": {
+            "CMAKE_CXX_COMPILER": "g++",
+            "CXX_WARNING_FLAGS": "-Wall;-Wextra;-Wpedantic",
+            "CXX_SANITIZERS_FLAGS": "-fsanitize=address,undefined"
+         }
+      }
+   ]
+}

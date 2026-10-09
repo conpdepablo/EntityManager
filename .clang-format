@@ -1,0 +1,15 @@
+---
+AccessModifierOffset: -2
+AlignTrailingComments: true
+AllowShortFunctionsOnASingleLine: All
+BasedOnStyle: WebKit
+BreakBeforeBraces: Allman
+ColumnLimit: 120
+ContinuationIndentWidth: 2
+IndentWidth: 2
+SortIncludes: false
+SpaceBeforeCpp11BracedList: false
+UseTab: Never
+BreakTemplateDeclarations: Yes
+# IndentExportBlock: false
+...

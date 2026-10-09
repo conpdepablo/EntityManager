@@ -1,1 +1,1 @@
-# EntityManager
+# TinyEngine::Entity Manager
