@@ -12,4 +12,4 @@ set(CXX_ALL_FLAGS ${CXX_WARNING_FLAGS} ${CXX_SANITIZERS_FLAGS})
 include(cmake/CreateModuleLib.cmake)
 
 add_subdirectory(src)
-# add_subdirectory(tests)
+add_subdirectory(tests)
