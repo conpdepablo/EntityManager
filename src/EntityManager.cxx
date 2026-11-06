@@ -19,7 +19,12 @@ struct [[nodiscard]] EntityManager
   using vector_t = std::vector<T>;
   using Storage_t = std::tuple<vector_t<Types>...>;
 
-  using Mask_t = std::uint32_t; // TODO: Check Cmps size.
+  // clang-format off
+  using Mask_t = std::conditional_t<sizeof...(Types) <= 8, std::uint8_t,
+                 std::conditional_t<sizeof...(Types) <= 16, std::uint16_t,
+                 std::conditional_t<sizeof...(Types) <= 32, std::uint32_t, std::uint64_t>>>;
+  // clang-format on
+
   using BitMask_t = std::vector<Mask_t>;
 
   using EntityId_t = std::size_t;
